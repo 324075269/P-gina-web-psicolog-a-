@@ -36,6 +36,34 @@
             box-shadow: 0 12px 28px -8px #1e3a5f60;
         }
 
+        /* === ENCABEZADO CON LOGOS === */
+        .header-logos {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #b5c7dd;
+        }
+        .logos-left, .logos-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .logos-left img, .logos-right img {
+            height: 60px;
+            width: auto;
+            background: transparent;
+        }
+        @media (max-width: 600px) {
+            .logos-left img, .logos-right img {
+                height: 40px;
+            }
+        }
+
         /* === NAVEGACIÓN === */
         .nav-links {
             display: flex;
@@ -317,6 +345,7 @@
         @media (max-width: 600px) {
             body { padding: 0.5rem; font-size: 18px; }
             .container { padding: 1rem 1.2rem; border-radius: 1.5rem; }
+            .header-logos { flex-direction: column; align-items: flex-start; }
             .autor-banner { flex-direction: column; align-items: flex-start; }
             .autor-texto h2 { font-size: 2rem; }
             .badge-grop { align-self: flex-start; }
@@ -335,6 +364,19 @@
 </head>
 <body>
 <div class="container">
+
+    <!-- ========== ENCABEZADO CON LOGOS UNAM Y PREPA 2 ========== -->
+    <div class="header-logos">
+        <div class="logos-left">
+            <img src="LOGOUNAM.png" alt="Logo UNAM" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+            <span style="display:none; font-size:1.5rem; background:#eee; padding:0.3rem 1rem;">[UNAM]</span>
+            <img src="LOGOPREPA2.png" alt="Logo Prepa 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+            <span style="display:none; font-size:1.5rem; background:#eee; padding:0.3rem 1rem;">[Prepa 2]</span>
+        </div>
+        <div class="logos-right">
+            <!-- Puedes poner algo más aquí si quieres, como el título corto -->
+        </div>
+    </div>
 
     <!-- Navegación -->
     <div class="nav-links">
@@ -517,7 +559,7 @@
                 </details>
             </div>
         </div>
-        <p style="background:#1e3a5f; color:white; padding:0.8rem 1.5rem; border-radius:60px; text-align:center;">Diferencia: uso del proceso de 4 pasos </p>
+        <p style="background:#1e3a5f; color:white; padding:0.8rem 1.5rem; border-radius:60px; text-align:center;">Diferencia: uso del proceso de 4 pasos = inteligencia emocional aplicada.</p>
     </div>
 
     <!-- ========== APLICACIONES RÁPIDAS ========== -->
