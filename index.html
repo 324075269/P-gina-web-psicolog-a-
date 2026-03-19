@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Gestión emocional · Goleman</title>
+    <title>Gestión emocional · Goleman · ENP2</title>
     <!-- Font Awesome 6 (íconos mínimos) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -58,7 +58,7 @@
             border-bottom-color: #1e3a5f;
         }
 
-        /* === AUTOR (responsive) === */
+        /* === AUTOR (sin tesis) === */
         .autor-banner {
             background: #1e3a5f;
             color: white;
@@ -69,7 +69,6 @@
             flex-wrap: wrap;
             gap: 1rem;
             align-items: center;
-            justify-content: space-between;
         }
         .autor-texto h2 {
             font-size: 2.2rem;
@@ -80,17 +79,8 @@
             font-size: 1rem;
             opacity: 0.95;
         }
-        .stat-eq {
-            background: #ffb347;
-            color: #1e3a5f;
-            border-radius: 40px;
-            padding: 0.6rem 1.5rem;
-            font-weight: 800;
-            font-size: 1.8rem;
-            white-space: nowrap;
-        }
 
-        /* === REFERENCIA COMPAÑEROS (wrap) === */
+        /* === REFERENCIA COMPAÑEROS === */
         .temas-ref {
             display: flex;
             flex-wrap: wrap;
@@ -103,7 +93,7 @@
             font-size: 0.95rem;
         }
 
-        /* === PILARES (grid responsivo) === */
+        /* === PILARES === */
         .grid-pilares {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -130,7 +120,6 @@
         .pilar p {
             font-size: 1rem;
         }
-        /* menú desplegable enmarcado y sombra (claramente interactivo) */
         details {
             margin-top: 1rem;
             background: #ffffff;
@@ -138,7 +127,6 @@
             border-radius: 1.2rem;
             padding: 0.6rem 1rem;
             box-shadow: 0 4px 8px rgba(0,20,50,0.1);
-            transition: 0.1s;
         }
         summary {
             font-weight: 600;
@@ -215,7 +203,7 @@
             margin-bottom: 1rem;
         }
 
-        /* === TABLA (scroll horizontal en móvil si es necesario) === */
+        /* === TABLA === */
         .tabla-wrapper {
             overflow-x: auto;
             margin: 2rem 0;
@@ -241,27 +229,54 @@
             border-bottom: 1px solid #cedaea;
         }
 
+        /* === FOOTER (con logo y crédito) === */
+        .footer-enp2 {
+            margin-top: 2.5rem;
+            border-top: 3px solid #b5c7dd;
+            padding: 1.5rem 0.5rem 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .footer-logo img {
+            height: 50px;
+            width: auto;
+            background: transparent;
+        }
+        .footer-texto {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1e3a5f;
+        }
+        .footer-texto i {
+            color: #c44b1e;
+            margin-right: 4px;
+        }
+
         hr {
-            margin: 2.5rem 0 1rem;
+            margin: 2rem 0 1rem;
             border: 1px solid #cfddee;
         }
 
-        /* === MEDIA QUERIES PARA MÓVIL (optimización) === */
+        /* === MEDIA QUERIES === */
         @media (max-width: 600px) {
             body { padding: 0.5rem; font-size: 18px; }
             .container { padding: 1rem 1.2rem; border-radius: 1.5rem; }
             .autor-banner { flex-direction: column; align-items: flex-start; }
             .autor-texto h2 { font-size: 2rem; }
-            .stat-eq { font-size: 1.5rem; padding: 0.4rem 1.2rem; align-self: flex-start; }
             .nav-links a { font-size: 0.9rem; white-space: nowrap; }
-            .temas-ref { font-size: 0.85rem; }
-            .grid-pilares { grid-template-columns: 1fr; } /* una columna en móvil */
-            .pilar i { font-size: 2rem; }
-            .pilar h3 { font-size: 1.6rem; }
-            .estrategia > div:first-child { font-size: 1.4rem; }
+            .grid-pilares { grid-template-columns: 1fr; }
+            .footer-enp2 { flex-direction: column; align-items: flex-start; }
+            .footer-logo img { height: 40px; }
         }
 
-        /* tabletas pequeñas */
         @media (min-width: 601px) and (max-width: 900px) {
             .grid-pilares { grid-template-columns: repeat(2, 1fr); }
         }
@@ -270,7 +285,7 @@
 <body>
 <div class="container">
 
-    <!-- Navegación rápida (sin iconos) -->
+    <!-- Navegación rápida -->
     <div class="nav-links">
         <a href="#inicio">Inicio</a>
         <a href="#pilares">5 pilares</a>
@@ -285,19 +300,16 @@
         <p style="font-size:1.5rem; color:#2b4a72;">basado en Daniel Goleman · inteligencia emocional</p>
     </div>
 
-    <!-- Autor: solo datos duros -->
+    <!-- Autor (sin ninguna referencia a CI/EQ) -->
     <div class="autor-banner">
         <div class="autor-texto">
             <h2>Daniel Goleman</h2>
-            <p>Psicólogo (Harvard) · periodista científico · <em>Inteligencia Emocional</em> (1995)</p>
-            <p style="font-size:1.4rem; font-weight:400; margin-top:0.8rem;">Tesis: éxito = 20% CI + 80% habilidades emocionales (EQ).</p>
-        </div>
-        <div class="stat-eq">
-            80% EQ
+            <p>Psicólogo (Harvard) · periodista científico · autor de <em>Inteligencia Emocional</em> (1995)</p>
+            <!-- Se eliminó cualquier mención a tesis de porcentajes -->
         </div>
     </div>
 
-    <!-- Contexto de compañeros (solo mención) -->
+    <!-- Contexto de compañeros -->
     <div class="temas-ref">
         <span>T2 Definición</span> <span>T3 Perspectivas</span> <span>T4 Bases biológicas</span>
         <span>T5 Procesos</span> <span>T6 Funciones</span>
@@ -305,7 +317,7 @@
         <span>T8 Social</span> <span>T9 Aplicaciones</span>
     </div>
 
-    <!-- ========== 5 PILARES (menús enmarcados con sombra) ========== -->
+    <!-- ========== 5 PILARES ========== -->
     <h2 id="pilares" style="font-size:2.2rem; margin: 2rem 0 1rem;">Los 5 componentes · Goleman</h2>
     <div class="grid-pilares">
         <div class="pilar">
@@ -314,7 +326,9 @@
             <p>Reconocer la emoción en el momento que surge.</p>
             <details>
                 <summary><i class="fas fa-plus"></i> más</summary>
-                <p>Permite etiquetar: "esto es enojo", "esto es ansiedad". Goleman: "piedra angular de la IE".</p>
+                <p><strong>Definición operativa:</strong> monitoreo de estados internos sin reaccionar de inmediato.<br>
+                <strong>Relevancia:</strong> permite etiquetar (ej. "esto es enojo") y facilita la autorregulación.<br>
+                <strong>Ejemplo:</strong> notar que el corazón late rápido antes de un examen e identificar "ansiedad".</p>
             </details>
         </div>
         <div class="pilar">
@@ -323,7 +337,9 @@
             <p>Manejar impulsos, pensar antes de actuar.</p>
             <details>
                 <summary><i class="fas fa-plus"></i> más</summary>
-                <p>No reprimir, sino redirigir. Ejemplo: pausa de 6 segundos antes de responder.</p>
+                <p><strong>Técnicas:</strong> pausa de 6 segundos, respiración profunda, reencuadre cognitivo.<br>
+                <strong>Base neurológica:</strong> activación de corteza prefrontal para inhibir respuestas de amígdala.<br>
+                <strong>Ejemplo:</strong> en una discusión, contar hasta diez antes de responder.</p>
             </details>
         </div>
         <div class="pilar">
@@ -332,7 +348,9 @@
             <p>Orientarse a metas pese a frustraciones.</p>
             <details>
                 <summary><i class="fas fa-plus"></i> más</summary>
-                <p>Implica optimismo y persistencia. Relacionado con el "estado de flujo" (Csikszentmihalyi).</p>
+                <p><strong>Componentes:</strong> optimismo, persistencia, estado de flujo (Csikszentmihalyi).<br>
+                <strong>Investigación:</strong> Seligman: optimistas atribuyen fracasos a causas temporales.<br>
+                <strong>Ejemplo:</strong> tras una mala calificación, pensar "puedo mejorar si estudio más".</p>
             </details>
         </div>
         <div class="pilar">
@@ -341,7 +359,9 @@
             <p>Captar señales emocionales de otros.</p>
             <details>
                 <summary><i class="fas fa-plus"></i> más</summary>
-                <p>Habilidad para ponerse en el lugar del otro. Base del altruismo y la cooperación.</p>
+                <p><strong>Tipos:</strong> cognitiva (comprender perspectiva) y afectiva (resonancia emocional).<br>
+                <strong>Importancia:</strong> base del altruismo, la cooperación y la comunicación no violenta.<br>
+                <strong>Ejemplo:</strong> notar que un amigo está triste aunque no lo diga explícitamente.</p>
             </details>
         </div>
         <div class="pilar">
@@ -350,7 +370,9 @@
             <p>Liderar, negociar, resolver conflictos.</p>
             <details>
                 <summary><i class="fas fa-plus"></i> más</summary>
-                <p>Influir en emociones ajenas, construir redes, colaborar en equipos.</p>
+                <p><strong>Habilidades concretas:</strong> escucha activa, comunicación asertiva, mediación.<br>
+                <strong>Aplicación:</strong> trabajo en equipo, redes de contacto, influencia positiva.<br>
+                <strong>Ejemplo:</strong> calmar una discusión entre compañeros proponiendo soluciones.</p>
             </details>
         </div>
     </div>
@@ -363,10 +385,11 @@
             <div><i class="fas fa-peace"></i> Mindfulness</div>
             <div class="estrategia-contenido">
                 <p>Atención al presente sin juzgar. Reduce reactividad.</p>
-                <div class="ejemplo"><strong>Ejemplo:</strong> antes de un examen, 3 respiraciones profundas enfocando la atención.</div>
+                <div class="ejemplo"><strong>Ejemplo:</strong> antes de un examen, 3 respiraciones profundas enfocando la atención en el aire.</div>
                 <details>
                     <summary><i class="fas fa-plus"></i> base neurológica</summary>
-                    <p>Disminuye activación de amígdala y fortalece control prefrontal (LeDoux, 1994).</p>
+                    <p>Disminuye activación de amígdala y fortalece control prefrontal (LeDoux, 1994).<br>
+                    <strong>Protocolo breve:</strong> sentarse, observar respiración, volver a ella cuando la mente divaga.</p>
                 </details>
             </div>
         </div>
@@ -378,7 +401,8 @@
                 <div class="ejemplo"><strong>Ejemplo:</strong> "Me molestó que no avisaras. Busquemos solución".</div>
                 <details>
                     <summary><i class="fas fa-plus"></i> modelo XYZ</summary>
-                    <p>"Cuando haces X, siento Y, prefiero Z" (Haim Ginott).</p>
+                    <p>"Cuando haces X, siento Y, prefiero Z" (Haim Ginott).<br>
+                    <strong>Ventaja:</strong> evita actitud defensiva y facilita acuerdos.</p>
                 </details>
             </div>
         </div>
@@ -390,7 +414,8 @@
                 <div class="ejemplo"><strong>Ejemplo:</strong> cambiar "soy un fracaso" por "esta nota no define mi capacidad".</div>
                 <details>
                     <summary><i class="fas fa-plus"></i> investigación</summary>
-                    <p>Seligman: optimismo se entrena reinterpretando fracasos como temporales.</p>
+                    <p>Seligman: optimismo se entrena reinterpretando fracasos como temporales, específicos y externos (no personales).<br>
+                    <strong>Técnica:</strong> identificar pensamiento automático, contrastar con evidencia, generar alternativa realista.</p>
                 </details>
             </div>
         </div>
@@ -407,7 +432,7 @@
                 <p>Compañero no entrega su parte. Alan grita: "¡Eres un inútil!". Pelea, interviene el profesor, no terminan.</p>
                 <details>
                     <summary><i class="fas fa-plus"></i> qué falló</summary>
-                    <p>Sin autoconciencia (no detectó enojo) y sin regulación (actuó impulsivamente).</p>
+                    <p>Sin autoconciencia (no detectó enojo), sin regulación (actuó impulsivamente), sin empatía (no consideró la situación del otro).</p>
                 </details>
             </div>
             <!-- Alto EQ -->
@@ -417,14 +442,14 @@
                 <p>Nota su molestia (autoconciencia), respira, habla en privado: "¿Qué pasó? Veamos cómo ayudarte". Entregan.</p>
                 <details>
                     <summary><i class="fas fa-plus"></i> habilidades aplicadas</summary>
-                    <p>Autoconciencia + regulación + empatía + comunicación asertiva.</p>
+                    <p>Autoconciencia + regulación + empatía + comunicación asertiva. Uso del diálogo para resolver.</p>
                 </details>
             </div>
         </div>
         <p style="background:#1e3a5f; color:white; padding:0.8rem 1.5rem; border-radius:60px; text-align:center;">Diferencia: uso de inteligencia emocional.</p>
     </div>
 
-    <!-- ========== TABLA RESUMEN (con scroll) ========== -->
+    <!-- ========== TABLA RESUMEN ========== -->
     <h2 id="tabla" style="font-size:2.2rem;">Aplicaciones concretas</h2>
     <div class="tabla-wrapper">
         <table class="tabla-apoyo">
@@ -436,14 +461,26 @@
         </table>
     </div>
 
-    <!-- Cita final -->
+    <!-- Cita final (sin tesis de porcentajes) -->
     <hr>
     <div style="text-align: center; margin: 1.5rem 0 0.5rem;">
-        <p style="font-size:1.5rem; font-style:italic;">"El CI aporta solo un 20% de los factores que determinan el éxito."</p>
+        <p style="font-size:1.5rem; font-style:italic;">"La inteligencia emocional es una forma distinta de ser inteligente."</p>
         <p style="font-size:1.1rem; margin-top:0.3rem;">— Daniel Goleman</p>
     </div>
 
-    <!-- Sin pie de página -->
+    <!-- ========== FOOTER CON LOGO Y CRÉDITO ========== -->
+    <div class="footer-enp2">
+        <div class="footer-logo">
+            <img src="LOGOENP2" alt="Logo ENP2" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none; font-size:2rem; background:#eee; padding:0.3rem 1rem;">[Logo ENP2]</span>
+            <span class="footer-texto"><i class="fas fa-school"></i> ENP2 · sitio creado por Ian Alexander Huidobro Castellanos</span>
+        </div>
+        <div class="footer-texto">
+            <i class="fas fa-calendar-alt"></i> 2026 · material de apoyo
+        </div>
+    </div>
+
+    <!-- Nota: si la imagen no se encuentra, se muestra un texto de respaldo. Asegúrate de que el archivo "LOGOENP2" esté en la misma carpeta o ajusta la ruta. -->
 </div>
 </body>
 </html>
