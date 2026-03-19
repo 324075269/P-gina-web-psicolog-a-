@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Gestión emocional · Goleman · ENP2</title>
-    <!-- Font Awesome 6 (íconos mínimos) -->
+    <title>Gestión emocional · Goleman + GROP · ENP2</title>
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -36,7 +36,7 @@
             box-shadow: 0 12px 28px -8px #1e3a5f60;
         }
 
-        /* === NAVEGACIÓN (compacta) === */
+        /* === NAVEGACIÓN === */
         .nav-links {
             display: flex;
             flex-wrap: wrap;
@@ -79,6 +79,15 @@
             font-size: 1rem;
             opacity: 0.95;
         }
+        .badge-grop {
+            background: #ffb347;
+            color: #1e3a5f;
+            border-radius: 40px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            font-size: 1.3rem;
+            white-space: nowrap;
+        }
 
         /* === REFERENCIA COMPAÑEROS === */
         .temas-ref {
@@ -93,10 +102,18 @@
             font-size: 0.95rem;
         }
 
-        /* === PILARES === */
+        /* === SECCIÓN TÍTULOS === */
+        h2.section {
+            font-size: 2.2rem;
+            margin: 2.5rem 0 1rem;
+            border-left: 8px solid #1e3a5f;
+            padding-left: 1rem;
+        }
+
+        /* === PILARES (GOLEMAN) === */
         .grid-pilares {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
@@ -117,9 +134,6 @@
             font-weight: 700;
             margin: 0.3rem 0 0.5rem;
         }
-        .pilar p {
-            font-size: 1rem;
-        }
         details {
             margin-top: 1rem;
             background: #ffffff;
@@ -137,7 +151,67 @@
         }
         summary i { margin-right: 6px; }
 
-        /* === ESTRATEGIAS === */
+        /* === PROCESO GROP (4 PASOS) === */
+        .grid-grop {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .paso {
+            background: #edf4fd;
+            border-radius: 1.5rem;
+            padding: 1.5rem 1rem;
+            border: 2px solid #1e3a5f;
+            box-shadow: 0 6px 12px rgba(0,30,60,0.08);
+        }
+        .paso h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin-bottom: 0.8rem;
+        }
+        .paso .num {
+            background: #1e3a5f;
+            color: white;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* === TABLA INTEGRADORA === */
+        .tabla-wrapper {
+            overflow-x: auto;
+            margin: 2.5rem 0;
+        }
+        .tabla-integracion {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 2px solid #b9cee8;
+            box-shadow: 0 6px 12px rgba(0,30,60,0.08);
+        }
+        .tabla-integracion th {
+            background: #1e3a5f;
+            color: white;
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+        .tabla-integracion td {
+            padding: 1rem;
+            border-bottom: 1px solid #cedaea;
+            vertical-align: top;
+        }
+        .tabla-integracion tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* === ESTRATEGIAS (ampliado) === */
         .grid-estrategias {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -203,33 +277,7 @@
             margin-bottom: 1rem;
         }
 
-        /* === TABLA === */
-        .tabla-wrapper {
-            overflow-x: auto;
-            margin: 2rem 0;
-        }
-        .tabla-apoyo {
-            width: 100%;
-            min-width: 500px;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            border: 2px solid #b9cee8;
-            box-shadow: 0 6px 12px rgba(0,30,60,0.08);
-        }
-        .tabla-apoyo th {
-            background: #1e3a5f;
-            color: white;
-            padding: 1rem;
-            font-size: 1.2rem;
-        }
-        .tabla-apoyo td {
-            padding: 0.8rem 1rem;
-            border-bottom: 1px solid #cedaea;
-        }
-
-        /* === FOOTER (con logo y crédito) === */
+        /* === FOOTER === */
         .footer-enp2 {
             margin-top: 2.5rem;
             border-top: 3px solid #b5c7dd;
@@ -271,204 +319,228 @@
             .container { padding: 1rem 1.2rem; border-radius: 1.5rem; }
             .autor-banner { flex-direction: column; align-items: flex-start; }
             .autor-texto h2 { font-size: 2rem; }
-            .nav-links a { font-size: 0.9rem; white-space: nowrap; }
+            .badge-grop { align-self: flex-start; }
+            .nav-links a { font-size: 0.9rem; }
             .grid-pilares { grid-template-columns: 1fr; }
+            .grid-grop { grid-template-columns: 1fr; }
             .footer-enp2 { flex-direction: column; align-items: flex-start; }
             .footer-logo img { height: 40px; }
         }
 
         @media (min-width: 601px) and (max-width: 900px) {
             .grid-pilares { grid-template-columns: repeat(2, 1fr); }
+            .grid-grop { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
 <div class="container">
 
-    <!-- Navegación rápida -->
+    <!-- Navegación -->
     <div class="nav-links">
         <a href="#inicio">Inicio</a>
-        <a href="#pilares">5 pilares</a>
+        <a href="#goleman">5 pilares (Goleman)</a>
+        <a href="#grop">4 pasos (GROP)</a>
+        <a href="#integracion">Integración</a>
         <a href="#estrategias">Estrategias</a>
         <a href="#caso">Caso</a>
-        <a href="#tabla">Tabla</a>
     </div>
 
-    <!-- Título principal -->
+    <!-- Título -->
     <div id="inicio" style="margin-bottom: 1.5rem;">
         <h1 style="font-size:3.2rem; font-weight:700; color:#1e3a5f; line-height:1.1;">Gestión emocional</h1>
-        <p style="font-size:1.5rem; color:#2b4a72;">basado en Daniel Goleman · inteligencia emocional</p>
+        <p style="font-size:1.5rem; color:#2b4a72;">Modelo de Goleman + Aportaciones del GROP</p>
     </div>
 
-    <!-- Autor (sin ninguna referencia a CI/EQ) -->
+    <!-- Autor: doble referencia -->
     <div class="autor-banner">
         <div class="autor-texto">
-            <h2>Daniel Goleman</h2>
-            <p>Psicólogo (Harvard) · periodista científico · autor de <em>Inteligencia Emocional</em> (1995)</p>
-            <!-- Se eliminó cualquier mención a tesis de porcentajes -->
+            <h2>Daniel Goleman · GROP</h2>
+            <p><strong>Goleman:</strong> psicólogo (Harvard), popularizó la inteligencia emocional.</p>
+            <p><strong>GROP (UdL–UB):</strong> grupo de investigación en educación emocional, modelo de 4 pasos y videojuegos Happy.</p>
+        </div>
+        <div class="badge-grop">
+            <i class="fas fa-gamepad"></i> Happy 8-12 / 12-16
         </div>
     </div>
 
-    <!-- Contexto de compañeros -->
+    <!-- Contexto compañeros -->
     <div class="temas-ref">
         <span>T2 Definición</span> <span>T3 Perspectivas</span> <span>T4 Bases biológicas</span>
         <span>T5 Procesos</span> <span>T6 Funciones</span>
-        <span style="background:#1e3a5f; color:white; padding:0 1rem; border-radius:30px;">T7 Goleman</span>
+        <span style="background:#1e3a5f; color:white; padding:0 1rem; border-radius:30px;">T7 Goleman + GROP</span>
         <span>T8 Social</span> <span>T9 Aplicaciones</span>
     </div>
 
-    <!-- ========== 5 PILARES ========== -->
-    <h2 id="pilares" style="font-size:2.2rem; margin: 2rem 0 1rem;">Los 5 componentes · Goleman</h2>
+    <!-- ========== GOLEMAN: 5 PILARES ========== -->
+    <h2 id="goleman" class="section"><i class="fas fa-cubes" style="color:#1e3a5f;"></i> 5 pilares de la inteligencia emocional (Goleman)</h2>
     <div class="grid-pilares">
         <div class="pilar">
             <i class="fas fa-smile"></i>
             <h3>Autoconciencia</h3>
             <p>Reconocer la emoción en el momento que surge.</p>
-            <details>
-                <summary><i class="fas fa-plus"></i> más</summary>
-                <p><strong>Definición operativa:</strong> monitoreo de estados internos sin reaccionar de inmediato.<br>
-                <strong>Relevancia:</strong> permite etiquetar (ej. "esto es enojo") y facilita la autorregulación.<br>
-                <strong>Ejemplo:</strong> notar que el corazón late rápido antes de un examen e identificar "ansiedad".</p>
-            </details>
+            <details><summary><i class="fas fa-plus"></i> más</summary><p>Permite etiquetar: "esto es enojo". Piedra angular de la IE.</p></details>
         </div>
         <div class="pilar">
             <i class="fas fa-sliders-h"></i>
             <h3>Autorregulación</h3>
             <p>Manejar impulsos, pensar antes de actuar.</p>
-            <details>
-                <summary><i class="fas fa-plus"></i> más</summary>
-                <p><strong>Técnicas:</strong> pausa de 6 segundos, respiración profunda, reencuadre cognitivo.<br>
-                <strong>Base neurológica:</strong> activación de corteza prefrontal para inhibir respuestas de amígdala.<br>
-                <strong>Ejemplo:</strong> en una discusión, contar hasta diez antes de responder.</p>
-            </details>
+            <details><summary><i class="fas fa-plus"></i> más</summary><p>Técnica del semáforo, pausa de 6 segundos.</p></details>
         </div>
         <div class="pilar">
             <i class="fas fa-rocket"></i>
             <h3>Automotivación</h3>
             <p>Orientarse a metas pese a frustraciones.</p>
-            <details>
-                <summary><i class="fas fa-plus"></i> más</summary>
-                <p><strong>Componentes:</strong> optimismo, persistencia, estado de flujo (Csikszentmihalyi).<br>
-                <strong>Investigación:</strong> Seligman: optimistas atribuyen fracasos a causas temporales.<br>
-                <strong>Ejemplo:</strong> tras una mala calificación, pensar "puedo mejorar si estudio más".</p>
-            </details>
+            <details><summary><i class="fas fa-plus"></i> más</summary><p>Optimismo, persistencia, estado de flujo.</p></details>
         </div>
         <div class="pilar">
             <i class="fas fa-heart"></i>
             <h3>Empatía</h3>
             <p>Captar señales emocionales de otros.</p>
-            <details>
-                <summary><i class="fas fa-plus"></i> más</summary>
-                <p><strong>Tipos:</strong> cognitiva (comprender perspectiva) y afectiva (resonancia emocional).<br>
-                <strong>Importancia:</strong> base del altruismo, la cooperación y la comunicación no violenta.<br>
-                <strong>Ejemplo:</strong> notar que un amigo está triste aunque no lo diga explícitamente.</p>
-            </details>
+            <details><summary><i class="fas fa-plus"></i> más</summary><p>Base del altruismo y la cooperación.</p></details>
         </div>
         <div class="pilar">
             <i class="fas fa-users"></i>
             <h3>Habilidades sociales</h3>
             <p>Liderar, negociar, resolver conflictos.</p>
-            <details>
-                <summary><i class="fas fa-plus"></i> más</summary>
-                <p><strong>Habilidades concretas:</strong> escucha activa, comunicación asertiva, mediación.<br>
-                <strong>Aplicación:</strong> trabajo en equipo, redes de contacto, influencia positiva.<br>
-                <strong>Ejemplo:</strong> calmar una discusión entre compañeros proponiendo soluciones.</p>
-            </details>
+            <details><summary><i class="fas fa-plus"></i> más</summary><p>Influir en emociones ajenas, construir redes.</p></details>
         </div>
     </div>
 
-    <!-- ========== ESTRATEGIAS DE REGULACIÓN ========== -->
-    <h2 id="estrategias" style="font-size:2.2rem; margin-top:2rem;">Estrategias de regulación</h2>
-    <div class="grid-estrategias">
-        <!-- Mindfulness -->
-        <div class="estrategia">
-            <div><i class="fas fa-peace"></i> Mindfulness</div>
-            <div class="estrategia-contenido">
-                <p>Atención al presente sin juzgar. Reduce reactividad.</p>
-                <div class="ejemplo"><strong>Ejemplo:</strong> antes de un examen, 3 respiraciones profundas enfocando la atención en el aire.</div>
-                <details>
-                    <summary><i class="fas fa-plus"></i> base neurológica</summary>
-                    <p>Disminuye activación de amígdala y fortalece control prefrontal (LeDoux, 1994).<br>
-                    <strong>Protocolo breve:</strong> sentarse, observar respiración, volver a ella cuando la mente divaga.</p>
-                </details>
-            </div>
+    <!-- ========== GROP: 4 PASOS ========== -->
+    <h2 id="grop" class="section"><i class="fas fa-project-diagram"></i> Proceso de gestión de conflictos (GROP)</h2>
+    <div class="grid-grop">
+        <div class="paso">
+            <span class="num">Paso 1</span>
+            <h3>Conciencia emocional</h3>
+            <p>Reconocer, identificar, nombrar y legitimar la emoción propia y ajena.</p>
+            <details><summary><i class="fas fa-plus"></i> detalle</summary><p>Incluye comprensión (empatía) y legitimación (respeto por la emoción).</p></details>
         </div>
-        <!-- Asertividad -->
-        <div class="estrategia">
-            <div><i class="fas fa-comment-dots"></i> Asertividad</div>
-            <div class="estrategia-contenido">
-                <p>Expresar necesidades sin agredir ni someterse.</p>
-                <div class="ejemplo"><strong>Ejemplo:</strong> "Me molestó que no avisaras. Busquemos solución".</div>
-                <details>
-                    <summary><i class="fas fa-plus"></i> modelo XYZ</summary>
-                    <p>"Cuando haces X, siento Y, prefiero Z" (Haim Ginott).<br>
-                    <strong>Ventaja:</strong> evita actitud defensiva y facilita acuerdos.</p>
-                </details>
-            </div>
+        <div class="paso">
+            <span class="num">Paso 2</span>
+            <h3>Parar · reducir impulsividad</h3>
+            <p>Detener la reacción automática, bajar intensidad emocional.</p>
+            <details><summary><i class="fas fa-plus"></i> detalle</summary><p>Técnicas de respiración, relajación, semáforo (Goleman).</p></details>
         </div>
-        <!-- Reestructuración cognitiva -->
-        <div class="estrategia">
-            <div><i class="fas fa-sync-alt"></i> Reestructuración cognitiva</div>
-            <div class="estrategia-contenido">
-                <p>Modificar pensamientos automáticos negativos.</p>
-                <div class="ejemplo"><strong>Ejemplo:</strong> cambiar "soy un fracaso" por "esta nota no define mi capacidad".</div>
-                <details>
-                    <summary><i class="fas fa-plus"></i> investigación</summary>
-                    <p>Seligman: optimismo se entrena reinterpretando fracasos como temporales, específicos y externos (no personales).<br>
-                    <strong>Técnica:</strong> identificar pensamiento automático, contrastar con evidencia, generar alternativa realista.</p>
-                </details>
-            </div>
+        <div class="paso">
+            <span class="num">Paso 3</span>
+            <h3>Estrategias de regulación</h3>
+            <p>Aplicar herramientas: reevaluación, distracción, expresión, búsqueda de solución.</p>
+            <details><summary><i class="fas fa-plus"></i> detalle</summary><p>Basado en el modelo de Gross (2007).</p></details>
+        </div>
+        <div class="paso">
+            <span class="num">Paso 4</span>
+            <h3>Comunicación asertiva</h3>
+            <p>Expresar respetando derechos propios y ajenos. Modelo NEMO.</p>
+            <details><summary><i class="fas fa-plus"></i> NEMO</summary><p><strong>N</strong>ombre + <strong>E</strong>moción + <strong>M</strong>otivo + <strong>O</strong>bjetivo.</p></details>
         </div>
     </div>
 
-    <!-- ========== CASO PRÁCTICO ========== -->
-    <div id="caso" class="caso-block">
-        <h2 style="font-size:2rem; margin-bottom:0.5rem;">Conflicto en equipo · misma situación</h2>
-        <div class="comparacion">
-            <!-- Bajo EQ -->
-            <div class="sujeto bajo">
-                <span class="label-caso" style="background:#f5d8d5; color:#a11;">Baja gestión</span>
-                <p style="font-weight:600; font-size:1.4rem;">Alan</p>
-                <p>Compañero no entrega su parte. Alan grita: "¡Eres un inútil!". Pelea, interviene el profesor, no terminan.</p>
-                <details>
-                    <summary><i class="fas fa-plus"></i> qué falló</summary>
-                    <p>Sin autoconciencia (no detectó enojo), sin regulación (actuó impulsivamente), sin empatía (no consideró la situación del otro).</p>
-                </details>
-            </div>
-            <!-- Alto EQ -->
-            <div class="sujeto alto">
-                <span class="label-caso" style="background:#d9eeda; color:#1f7042;">Alta gestión</span>
-                <p style="font-weight:600; font-size:1.4rem;">Diana</p>
-                <p>Nota su molestia (autoconciencia), respira, habla en privado: "¿Qué pasó? Veamos cómo ayudarte". Entregan.</p>
-                <details>
-                    <summary><i class="fas fa-plus"></i> habilidades aplicadas</summary>
-                    <p>Autoconciencia + regulación + empatía + comunicación asertiva. Uso del diálogo para resolver.</p>
-                </details>
-            </div>
-        </div>
-        <p style="background:#1e3a5f; color:white; padding:0.8rem 1.5rem; border-radius:60px; text-align:center;">Diferencia: uso de inteligencia emocional.</p>
-    </div>
-
-    <!-- ========== TABLA RESUMEN ========== -->
-    <h2 id="tabla" style="font-size:2.2rem;">Aplicaciones concretas</h2>
+    <!-- ========== TABLA DE INTEGRACIÓN ========== -->
+    <h2 id="integracion" class="section"><i class="fas fa-link"></i> Integración Goleman + GROP</h2>
     <div class="tabla-wrapper">
-        <table class="tabla-apoyo">
-            <tr><th>Emoción</th><th>Contexto</th><th>Acción</th></tr>
-            <tr><td>Ira</td><td>Provocación</td><td>Pausa de 6 segundos, respirar, luego responder sin agredir.</td></tr>
-            <tr><td>Ansiedad</td><td>Examen oral</td><td>Reevaluación: "la activación ayuda a estar alerta".</td></tr>
-            <tr><td>Frustración</td><td>Mala calificación</td><td>Reestructurar: "es un resultado, no mi identidad".</td></tr>
-            <tr><td>Rechazo social</td><td>Exclusión</td><td>Autoempatía + buscar otra red.</td></tr>
+        <table class="tabla-integracion">
+            <tr><th>Paso GROP</th><th>Descripción</th><th>Pilar(es) de Goleman</th></tr>
+            <tr><td>1. Conciencia emocional</td><td>Reconocer, nombrar, legitimar</td><td>Autoconciencia + Empatía</td></tr>
+            <tr><td>2. Parar / reducir impulsividad</td><td>Pausa, respirar, semáforo</td><td>Autorregulación</td></tr>
+            <tr><td>3. Estrategias de regulación</td><td>Reevaluar, distraerse, expresar, buscar solución</td><td>Autorregulación + Automotivación</td></tr>
+            <tr><td>4. Comunicación asertiva</td><td>NEMO, respeto, diálogo</td><td>Habilidades sociales + Empatía</td></tr>
         </table>
     </div>
 
-    <!-- Cita final (sin tesis de porcentajes) -->
+    <!-- ========== ESTRATEGIAS DETALLADAS ========== -->
+    <h2 class="section"><i class="fas fa-tools"></i> Estrategias de regulación (ampliado)</h2>
+    <div class="grid-estrategias">
+        <!-- Reevaluación cognitiva -->
+        <div class="estrategia">
+            <div><i class="fas fa-sync-alt"></i> Reevaluación cognitiva</div>
+            <div class="estrategia-contenido">
+                <p>Cambiar la interpretación de la situación.</p>
+                <div class="ejemplo"><strong>Ej:</strong> "los nervios me ayudan a estar alerta" en lugar de "voy a fracasar".</div>
+                <details><summary>base empírica</summary><p>Gross y John (2003): mejora autoestima, relaciones y bienestar.</p></details>
+            </div>
+        </div>
+        <!-- Expresión emocional -->
+        <div class="estrategia">
+            <div><i class="fas fa-comment"></i> Expresión emocional</div>
+            <div class="estrategia-contenido">
+                <p>Verbalizar o escribir lo que se siente.</p>
+                <div class="ejemplo"><strong>Ej:</strong> hablar con un amigo, llevar un diario.</div>
+                <details><summary>efectos</summary><p>Reduce síntomas físicos, rumiación y visitas médicas (Baikie y Wilhelm, 2005).</p></details>
+            </div>
+        </div>
+        <!-- Distracción -->
+        <div class="estrategia">
+            <div><i class="fas fa-headphones"></i> Distracción</div>
+            <div class="estrategia-contenido">
+                <p>Desconectar temporalmente de la emoción intensa.</p>
+                <div class="ejemplo"><strong>Ej:</strong> música, ejercicio, serie.</div>
+                <details><summary>cuándo usarla</summary><p>Ideal para emociones de muy alta intensidad (Sheppes et al., 2014).</p></details>
+            </div>
+        </div>
+        <!-- Búsqueda de solución -->
+        <div class="estrategia">
+            <div><i class="fas fa-search"></i> Búsqueda de solución</div>
+            <div class="estrategia-contenido">
+                <p>Definir problema, generar alternativas, actuar.</p>
+                <div class="ejemplo"><strong>Ej:</strong> ante un conflicto, preguntar "¿cómo podemos resolverlo?"</div>
+                <details><summary>modelo</summary><p>Krumboltz (1979): definir, planificar, alternativas, experimentar.</p></details>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CASO PRÁCTICO (con análisis GROP) ========== -->
+    <div id="caso" class="caso-block">
+        <h2 style="font-size:2rem; margin-bottom:0.5rem;">Conflicto en equipo · análisis GROP</h2>
+        <div class="comparacion">
+            <!-- Baja gestión -->
+            <div class="sujeto bajo">
+                <span class="label-caso" style="background:#f5d8d5; color:#a11;">Baja gestión</span>
+                <p style="font-weight:600; font-size:1.4rem;">Alan</p>
+                <p>Compañero no entrega su parte. Alan grita: "¡Eres un inútil!".</p>
+                <details><summary>análisis GROP</summary>
+                    <strong>Paso 1:</strong> falla (no identifica su enojo).<br>
+                    <strong>Paso 2:</strong> falla (actúa impulsivo).<br>
+                    <strong>Paso 4:</strong> comunicación agresiva.
+                </details>
+            </div>
+            <!-- Alta gestión -->
+            <div class="sujeto alto">
+                <span class="label-caso" style="background:#d9eeda; color:#1f7042;">Alta gestión</span>
+                <p style="font-weight:600; font-size:1.4rem;">Diana</p>
+                <p>Nota su molestia, respira, habla en privado: "¿Qué pasó? Busquemos solución".</p>
+                <details><summary>análisis GROP</summary>
+                    <strong>Paso 1:</strong> conciencia de su frustración.<br>
+                    <strong>Paso 2:</strong> pausa, respira.<br>
+                    <strong>Paso 3:</strong> elige diálogo (estrategia de solución).<br>
+                    <strong>Paso 4:</strong> comunicación asertiva.
+                </details>
+            </div>
+        </div>
+        <p style="background:#1e3a5f; color:white; padding:0.8rem 1.5rem; border-radius:60px; text-align:center;">Diferencia: uso del proceso de 4 pasos = inteligencia emocional aplicada.</p>
+    </div>
+
+    <!-- ========== APLICACIONES CONCRETAS ========== -->
+    <h2 class="section"><i class="fas fa-table"></i> Aplicaciones rápidas</h2>
+    <div class="tabla-wrapper">
+        <table class="tabla-integracion">
+            <tr><th>Emoción</th><th>Contexto</th><th>Estrategia recomendada</th></tr>
+            <tr><td>Ira</td><td>Provocación</td><td>Paso 2 (parar) + reevaluación</td></tr>
+            <tr><td>Ansiedad</td><td>Examen oral</td><td>Reevaluación cognitiva + respiración</td></tr>
+            <tr><td>Frustración</td><td>Mala calificación</td><td>Reestructuración + búsqueda de solución</td></tr>
+            <tr><td>Rechazo social</td><td>Exclusión</td><td>Expresión emocional (hablar/escribir) + autoempatía</td></tr>
+        </table>
+    </div>
+
+    <!-- Cita final (solo Goleman, sin tesis) -->
     <hr>
     <div style="text-align: center; margin: 1.5rem 0 0.5rem;">
         <p style="font-size:1.5rem; font-style:italic;">"La inteligencia emocional es una forma distinta de ser inteligente."</p>
         <p style="font-size:1.1rem; margin-top:0.3rem;">— Daniel Goleman</p>
+        <p style="font-size:1.1rem; margin-top:0.3rem;">"Las emociones mal gestionadas generan conflicto; las bien gestionadas construyen convivencia." — GROP</p>
     </div>
 
-    <!-- ========== FOOTER CON LOGO Y CRÉDITO ========== -->
+    <!-- FOOTER con logo y crédito -->
     <div class="footer-enp2">
         <div class="footer-logo">
             <img src="LOGOENP2.png" alt="Logo ENP2" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -476,11 +548,10 @@
             <span class="footer-texto"><i class="fas fa-school"></i> ENP2 · sitio creado por Ian Alexander Huidobro Castellanos</span>
         </div>
         <div class="footer-texto">
-            <i class="fas fa-calendar-alt"></i> 2026 · material de apoyo
+            <i class="fas fa-calendar-alt"></i> 2026 · material de apoyo · fuentes: Goleman (1995) / GROP (2020)
         </div>
     </div>
 
-    <!-- Nota: si la imagen no se encuentra, se muestra un texto de respaldo. Asegúrate de que el archivo "LOGOENP2" esté en la misma carpeta o ajusta la ruta. -->
 </div>
 </body>
 </html>
