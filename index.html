@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Gestión emocional · Goleman + GROP · ENP2</title>
-    <!-- Font Awesome 6 (solo iconos estructurales) -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -54,14 +54,12 @@
             flex-wrap: wrap;
         }
         .logos-left img, .logos-right img {
-            height: 60px;
+            height: 55px;
             width: auto;
             background: transparent;
         }
         @media (max-width: 600px) {
-            .logos-left img, .logos-right img {
-                height: 40px;
-            }
+            .logos-left img, .logos-right img { height: 40px; }
         }
 
         /* === NAVEGACIÓN === */
@@ -239,7 +237,7 @@
             border-bottom: none;
         }
 
-        /* === ESTRATEGIAS (ampliado) === */
+        /* === ESTRATEGIAS (título sin "ampliado") === */
         .grid-estrategias {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -331,17 +329,12 @@
             font-weight: 500;
             color: #1e3a5f;
         }
-        .footer-texto i {
-            color: #c44b1e;
-            margin-right: 4px;
-        }
 
         hr {
             margin: 2rem 0 1rem;
             border: 1px solid #cfddee;
         }
 
-        /* === MEDIA QUERIES === */
         @media (max-width: 600px) {
             body { padding: 0.5rem; font-size: 18px; }
             .container { padding: 1rem 1.2rem; border-radius: 1.5rem; }
@@ -365,16 +358,14 @@
 <body>
 <div class="container">
 
-    <!-- ========== ENCABEZADO CON LOGOS UNAM Y PREPA 2 ========== -->
+    <!-- Encabezado con logos UNAM y Prepa2 -->
     <div class="header-logos">
         <div class="logos-left">
-            <img src="LOGOUNAM.png" alt="Logo UNAM" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
-            <span style="display:none; font-size:1.5rem; background:#eee; padding:0.3rem 1rem;">[UNAM]</span>
-            <img src="LOGOENP2.png" alt="Logo Prepa 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
-            <span style="display:none; font-size:1.5rem; background:#eee; padding:0.3rem 1rem;">[Prepa 2]</span>
+            <img src="LOGOUNAM.png" alt="Logo UNAM" onerror="this.style.display='none';">
+            <img src="LOGOPREPA2.png" alt="Logo Prepa 2" onerror="this.style.display='none';">
         </div>
         <div class="logos-right">
-            <!-- Puedes poner algo más aquí si quieres, como el título corto -->
+            <img src="LOGOENP2.png" alt="Logo ENP2" onerror="this.style.display='none';">
         </div>
     </div>
 
@@ -394,7 +385,7 @@
         <p style="font-size:1.5rem; color:#2b4a72;">Modelo de Goleman Y Aportaciones del GROP</p>
     </div>
 
-    <!-- Autor: doble referencia, sin videojuegos -->
+    <!-- Autor -->
     <div class="autor-banner">
         <div class="autor-texto">
             <h2>Daniel Goleman · GROP</h2>
@@ -474,7 +465,7 @@
             <span class="num">Paso 4</span>
             <h3>Comunicación asertiva</h3>
             <p>Expresar respetando derechos propios y ajenos. Modelo NEMO.</p>
-            <details><summary><i class="fas fa-plus"></i> NEMO</summary><p><strong>N</strong>ombre + <strong>E</strong>moción + <strong>M</strong>otivo + <strong>O</strong>bjetivo.</p></details>
+            <details><summary><i class="fas fa-plus"></i> NEMO</summary><p><strong>N</strong>ombre <strong>y</strong> <strong>E</strong>moción <strong>y</strong> <strong>M</strong>otivo <strong>y</strong> <strong>O</strong>bjetivo.</p></details>
         </div>
     </div>
 
@@ -482,18 +473,17 @@
     <h2 id="integracion" class="section"><i class="fas fa-link"></i> Integración Goleman Y GROP</h2>
     <div class="tabla-wrapper">
         <table class="tabla-integracion">
-            <tr><th>Paso GROP</th><th>Descripción</th><th>Pilar(es) de Goleman</th></tr>
-            <tr><td>1. Conciencia emocional</td><td>Reconocer, nombrar, legitimar</td><td>Autoconciencia Y Empatía</td></tr>
-            <tr><td>2. Parar / reducir impulsividad</td><td>Pausa, respirar, semáforo</td><td>Autorregulación</td></tr>
-            <tr><td>3. Estrategias de regulación</td><td>Reevaluar, distraerse, expresar, buscar solución</td><td>Autorregulación Y Automotivación</td></tr>
-            <tr><td>4. Comunicación asertiva</td><td>NEMO, respeto, diálogo</td><td>Habilidades sociales Y Empatía</td></tr>
+             <tr><th>Paso GROP</th><th>Descripción</th><th>Pilar(es) de Goleman</th></tr>
+             <tr><td>1. Conciencia emocional</td><td>Reconocer, nombrar, legitimar</td><td>Autoconciencia Y Empatía</td></tr>
+             <tr><td>2. Parar / reducir impulsividad</td><td>Pausa, respirar, semáforo</td><td>Autorregulación</td></tr>
+             <tr><td>3. Estrategias de regulación</td><td>Reevaluar, distraerse, expresar, buscar solución</td><td>Autorregulación Y Automotivación</td></tr>
+             <tr><td>4. Comunicación asertiva</td><td>NEMO, respeto, diálogo</td><td>Habilidades sociales Y Empatía</td></tr>
         </table>
     </div>
 
-    <!-- ========== ESTRATEGIAS DETALLADAS ========== -->
-    <h2 class="section"><i class="fas fa-tools"></i> Estrategias de regulación (ampliado)</h2>
+    <!-- ========== ESTRATEGIAS DE REGULACIÓN (título sin "ampliado") ========== -->
+    <h2 class="section"><i class="fas fa-tools"></i> Estrategias de regulación</h2>
     <div class="grid-estrategias">
-        <!-- Reevaluación cognitiva -->
         <div class="estrategia">
             <div><i class="fas fa-sync-alt"></i> Reevaluación cognitiva</div>
             <div class="estrategia-contenido">
@@ -502,7 +492,6 @@
                 <details><summary>base empírica</summary><p>Gross y John (2003): mejora autoestima, relaciones y bienestar.</p></details>
             </div>
         </div>
-        <!-- Expresión emocional -->
         <div class="estrategia">
             <div><i class="fas fa-comment"></i> Expresión emocional</div>
             <div class="estrategia-contenido">
@@ -511,7 +500,6 @@
                 <details><summary>efectos</summary><p>Reduce síntomas físicos, rumiación y visitas médicas (Baikie y Wilhelm, 2005).</p></details>
             </div>
         </div>
-        <!-- Distracción -->
         <div class="estrategia">
             <div><i class="fas fa-headphones"></i> Distracción</div>
             <div class="estrategia-contenido">
@@ -520,7 +508,6 @@
                 <details><summary>cuándo usarla</summary><p>Ideal para emociones de muy alta intensidad (Sheppes et al., 2014).</p></details>
             </div>
         </div>
-        <!-- Búsqueda de solución -->
         <div class="estrategia">
             <div><i class="fas fa-search"></i> Búsqueda de solución</div>
             <div class="estrategia-contenido">
@@ -531,11 +518,10 @@
         </div>
     </div>
 
-    <!-- ========== CASO PRÁCTICO (con análisis GROP) ========== -->
+    <!-- ========== CASO PRÁCTICO ========== -->
     <div id="caso" class="caso-block">
         <h2 style="font-size:2rem; margin-bottom:0.5rem;">Conflicto en equipo · análisis GROP</h2>
         <div class="comparacion">
-            <!-- Baja gestión -->
             <div class="sujeto bajo">
                 <span class="label-caso" style="background:#f5d8d5; color:#a11;">Baja gestión</span>
                 <p style="font-weight:600; font-size:1.4rem;">Alan</p>
@@ -546,7 +532,6 @@
                     <strong>Paso 4:</strong> comunicación agresiva.
                 </details>
             </div>
-            <!-- Alta gestión -->
             <div class="sujeto alto">
                 <span class="label-caso" style="background:#d9eeda; color:#1f7042;">Alta gestión</span>
                 <p style="font-weight:600; font-size:1.4rem;">Diana</p>
@@ -566,15 +551,15 @@
     <h2 class="section"><i class="fas fa-table"></i> Aplicaciones rápidas</h2>
     <div class="tabla-wrapper">
         <table class="tabla-integracion">
-            <tr><th>Emoción</th><th>Contexto</th><th>Estrategia recomendada</th></tr>
-            <tr><td>Ira</td><td>Provocación</td><td>Paso 2 (parar) Y reevaluación</td></tr>
-            <tr><td>Ansiedad</td><td>Examen oral</td><td>Reevaluación cognitiva Y respiración</td></tr>
-            <tr><td>Frustración</td><td>Mala calificación</td><td>Reestructuración Y búsqueda de solución</td></tr>
-            <tr><td>Rechazo social</td><td>Exclusión</td><td>Expresión emocional (hablar Y escribir) Y autoempatía</td></tr>
+             <tr><th>Emoción</th><th>Contexto</th><th>Estrategia recomendada</th></tr>
+             <tr><td>Ira</td><td>Provocación</td><td>Paso 2 (parar) Y reevaluación</td></tr>
+             <tr><td>Ansiedad</td><td>Examen oral</td><td>Reevaluación cognitiva Y respiración</td></tr>
+             <tr><td>Frustración</td><td>Mala calificación</td><td>Reestructuración Y búsqueda de solución</td></tr>
+             <tr><td>Rechazo social</td><td>Exclusión</td><td>Expresión emocional (hablar Y escribir) Y autoempatía</td></tr>
         </table>
     </div>
 
-    <!-- Cita final (solo Goleman, sin tesis) -->
+    <!-- Cita final -->
     <hr>
     <div style="text-align: center; margin: 1.5rem 0 0.5rem;">
         <p style="font-size:1.5rem; font-style:italic;">"La inteligencia emocional es una forma distinta de ser inteligente."</p>
@@ -585,8 +570,7 @@
     <!-- FOOTER con logo y crédito -->
     <div class="footer-enp2">
         <div class="footer-logo">
-            <img src="LOGOENP2.png" alt="Logo ENP2" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span style="display:none; font-size:2rem; background:#eee; padding:0.3rem 1rem;">[Logo ENP2]</span>
+            <img src="LOGOENP2.png" alt="Logo ENP2" onerror="this.style.display='none';">
             <span class="footer-texto"><i class="fas fa-school"></i> ENP2 · sitio creado por Ian Alexander Huidobro Castellanos</span>
         </div>
         <div class="footer-texto">
